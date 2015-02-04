@@ -1,3 +1,11 @@
+soldiermob by maikerumine.
+
+based off of PilzAdam's simplemobs and the default player character.
+
+This mob adds VERY aggressive soldiers that will shoot at you.  Good luck!
+
+
+
 === MOBS-MOD for MINETEST-C55 ===
 by PilzAdam
 
