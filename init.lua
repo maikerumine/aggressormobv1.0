@@ -1,6 +1,6 @@
-dofile(minetest.get_modpath("aggressormob").."/api.lua")
+dofile(minetest.get_modpath("soldiermob").."/api.lua")
 --
-mmobs:register_mob("aggressormob:aggressormob", {
+mmobs:register_mob("soldiermob:aggressormob", {
 	type = "monster",
 	hp_max = 50,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
@@ -29,7 +29,7 @@ mmobs:register_mob("aggressormob:aggressormob", {
 		attack = "mmobs_bullet",
 	},
 	attack_type = "shoot",
-	arrow = "aggressormob:bullet",
+	arrow = "soldiermob:bullet",
 	shoot_interval = 0.05,
 	sounds = {
 		attack = "mmobs_bullet",
@@ -47,9 +47,9 @@ mmobs:register_mob("aggressormob:aggressormob", {
 		punch_end = 198,
 	}
 })
-mmobs:register_spawn("aggressormob:aggressormob", {"default:dirt_with_grass","default:sand", "default:desert_stone", "default:cobble", "default:mossycobble"}, 7, -1, 7000, 11, 30000)
+mmobs:register_spawn("soldiermob:aggressormob", {"default:dirt_with_grass","default:sand", "default:desert_stone", "default:cobble", "default:mossycobble"}, 7, -1, 7000, 11, 30000)
 
-mmobs:register_arrow("aggressormob:bullet", {
+mmobs:register_arrow("soldiermob:bullet", {
 	visual = "sprite",
 	visual_size = {x = 0.275, y = 0.275},
 	textures = {"aggressormob_bullet.png"},
@@ -83,7 +83,7 @@ mmobs:register_arrow("aggressormob:bullet", {
 		end
 	end
 })
-mmobs:register_mob("aggressormob:applmons", {
+mmobs:register_mob("soldiermob:applmons", {
 	type = "monster",
 	hp_max = 15,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.0, 0.4},
@@ -122,9 +122,9 @@ mmobs:register_mob("aggressormob:applmons", {
 		punch_end = 63,
 	}
 })
-mmobs:register_spawn("aggressormob:applmons", {"default:dirt_with_grass" , "default:stone", "default:desert_stone", "default:cobble", "default:mossycobble"}, 3, -1, 7000, 8, 30000)
+mmobs:register_spawn("soldiermob:applmons", {"default:dirt_with_grass" , "default:stone", "default:desert_stone", "default:cobble", "default:mossycobble"}, 3, -1, 7000, 8, 30000)
 
 
 if minetest.setting_get("log_mods") then
-	minetest.log("action", "aggressormob loaded")
+	minetest.log("action", "soldiermob loaded")
 end
