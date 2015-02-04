@@ -1,5 +1,5 @@
-mmobs = {}
-function mmobs:register_mob(name, def)
+soldiermob = {}
+function soldiermob:register_mob(name, def)
 	minetest.register_entity(name, {
 		hp_max = def.hp_max,
 		physical = true,
@@ -476,9 +476,9 @@ function mmobs:register_mob(name, def)
 	})
 end
 
-mmobs.spawning_mobs = {}
-function mmobs:register_spawn(name, nodes, max_light, min_light, chance, active_object_count, max_height, spawn_func)
-	mmobs.spawning_mobs[name] = true
+soldiermob.spawning_mobs = {}
+function soldiermob:register_spawn(name, nodes, max_light, min_light, chance, active_object_count, max_height, spawn_func)
+	soldiermob.spawning_mobs[name] = true
 	minetest.register_abm({
 		nodenames = nodes,
 		neighbors = {"air"},
@@ -488,7 +488,7 @@ function mmobs:register_spawn(name, nodes, max_light, min_light, chance, active_
 			if active_object_count_wider > active_object_count then
 				return
 			end
-			if not mmobs.spawning_mobs[name] then
+			if not soldiermob.spawning_mobs[name] then
 				return
 			end
 			pos.y = pos.y+1
@@ -523,7 +523,7 @@ function mmobs:register_spawn(name, nodes, max_light, min_light, chance, active_
 	})
 end
 
-function mmobs:register_arrow(name, def)
+function soldiermob:register_arrow(name, def)
 	minetest.register_entity(name, {
 		physical = false,
 		visual = def.visual,
