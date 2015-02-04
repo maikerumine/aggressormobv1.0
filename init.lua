@@ -1,6 +1,6 @@
 dofile(minetest.get_modpath("soldiermob").."/api.lua")
 --
-mmobs:register_mob("soldiermob:aggressormob", {
+soldiermob:register_mob("soldiermob:aggressormob", {
 	type = "monster",
 	hp_max = 50,
 	collisionbox = {-0.3, -1.0, -0.3, 0.3, 0.8, 0.3},
@@ -47,9 +47,9 @@ mmobs:register_mob("soldiermob:aggressormob", {
 		punch_end = 198,
 	}
 })
-mmobs:register_spawn("soldiermob:aggressormob", {"default:dirt_with_grass","default:sand", "default:desert_stone", "default:cobble", "default:mossycobble"}, 7, -1, 7000, 11, 30000)
+soldiermob:register_spawn("soldiermob:aggressormob", {"default:dirt_with_grass","default:sand", "default:desert_stone", "default:cobble", "default:mossycobble"}, 7, -1, 7000, 11, 30000)
 
-mmobs:register_arrow("soldiermob:bullet", {
+soldiermob:register_arrow("soldiermob:bullet", {
 	visual = "sprite",
 	visual_size = {x = 0.275, y = 0.275},
 	textures = {"aggressormob_bullet.png"},
@@ -83,7 +83,7 @@ mmobs:register_arrow("soldiermob:bullet", {
 		end
 	end
 })
-mmobs:register_mob("soldiermob:applmons", {
+soldiermob:register_mob("soldiermob:applmons", {
 	type = "monster",
 	hp_max = 15,
 	collisionbox = {-0.4, -0.01, -0.4, 0.4, 1.0, 0.4},
@@ -122,7 +122,7 @@ mmobs:register_mob("soldiermob:applmons", {
 		punch_end = 63,
 	}
 })
-mmobs:register_spawn("soldiermob:applmons", {"default:dirt_with_grass" , "default:stone", "default:desert_stone", "default:cobble", "default:mossycobble"}, 3, -1, 7000, 8, 30000)
+soldiermob:register_spawn("soldiermob:applmons", {"default:dirt_with_grass" , "default:stone", "default:desert_stone", "default:cobble", "default:mossycobble"}, 3, -1, 7000, 8, 30000)
 
 
 if minetest.setting_get("log_mods") then
